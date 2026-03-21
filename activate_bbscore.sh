@@ -4,13 +4,13 @@
 
 if command -v conda &> /dev/null; then
     source "$(conda info --base)/etc/profile.d/conda.sh"
-    conda activate bbscore
+    conda activate cs375_2
 else
     echo "Error: conda not found"
     return 1
 fi
 
-export SCIKIT_LEARN_DATA="/afs/.ir/users/t/h/thekej/bbscore_data"
+export SCIKIT_LEARN_DATA="/Users/sebastiankane/bbscore_data"
 
 PYTHON_PATH=$(which python)
 echo "BBScore environment activated!"

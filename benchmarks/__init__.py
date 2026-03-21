@@ -23,6 +23,6 @@ try:
 except ImportError as _e:
     print(f"[Warning] Failed to import benchmark module: Physion.Placement\n{_e}")
 
-from benchmarks.SSV2 import SSV2Benchmark
+from benchmarks.SSV2 import SSV2Benchmark, ModifiedSSV2Benchmark
 from benchmarks.V1SineGratings import V1SineGratingsBenchmark
 from benchmarks.LeBel2023 import LeBel2023Benchmark

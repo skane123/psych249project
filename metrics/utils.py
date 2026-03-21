@@ -1840,14 +1840,14 @@ class LinearInternalModel(nn.Module):
             #    f"Warning: LinearInternalModel received sequential input of shape {x.shape}. Flattening over sequence dimension.")
             N, T, D = x.shape  # B, T, D
             # let's average. If concatenation is preferred, this can be changed.
-            # x = x.mean(dim=1) # Average over sequence length --> (N, D)
+            x = x.mean(dim=1) # Average over sequence length --> (N, D)
             # Or, flatten:
-            x = x.reshape(N, -1)
+            # x = x.reshape(N, -1)
         elif x.ndim > 3:  # e.g. (batch, channels, height, width) for images
             # print(
             #    f"Warning: LinearInternalModel received input of shape {x.shape}. Flattening non-batch dimensions.")
             x = x.reshape(x.shape[0], -1)
-
+        x = x.float()
         return self.linear(x)
 
 

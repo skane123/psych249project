@@ -370,12 +370,17 @@ class TorchRProbabilitiesClassifier:
         test_target: np.ndarray,
         behavioral_target: Optional[np.ndarray] = None,
         hidden_size: int = 128,
-        lr_options: List[float] = [1e-4, 1e-3, 1e-2],
-        penalty_options: List[float] = [1e-4, 1e-3, 1e-2, 1e-1, 1],
-        batch_size: int = 32,
-        n_epochs: int = 50,
-        patience: int = 50,
-        use_multi_gpu: bool = True
+        # lr_options: List[float] = [1e-4, 1e-3, 1e-2],
+        # penalty_options: List[float] = [1e-4, 1e-3, 1e-2, 1e-1, 1],
+        # batch_size: int = 32,
+        # n_epochs: int = 50,
+        # patience: int = 50,
+        lr_options: List[float] = [1e-3],
+        penalty_options: List[float] = [1e-3, 1e-2],
+        batch_size: int = 512,
+        n_epochs: int = 10,
+        patience: int = 5,
+        use_multi_gpu: bool = False
     ):
         """
         Initialize the TorchRProbabilitiesClassifier with grid search capabilities.

@@ -1,6 +1,6 @@
 from benchmarks.BBS import BenchmarkScore
 from benchmarks.BBS_online import OnlineBenchmarkScore
-from data.SSV2_pruned import (
+from data.modified_SSV2 import (
     SSV2PrunedStimulusTrainSet,
     AugmentedSSV2PrunedStimulusTrainSet,
     SSV2PrunedStimulusTestSet
@@ -8,7 +8,7 @@ from data.SSV2_pruned import (
 from benchmarks import BENCHMARK_REGISTRY
 
 
-class SSV2Benchmark(OnlineBenchmarkScore):
+class ModifiedSSV2Benchmark(OnlineBenchmarkScore):
     def __init__(self, model_identifier, layer_name, debug: bool = False, batch_size: int = 4):
         super().__init__(
             stimulus_train_class=(SSV2PrunedStimulusTrainSet,
@@ -23,10 +23,10 @@ class SSV2Benchmark(OnlineBenchmarkScore):
         )
 
 
-BENCHMARK_REGISTRY["SSV2"] = SSV2Benchmark
+BENCHMARK_REGISTRY["ModifiedSSV2Benchmark"] = ModifiedSSV2Benchmark
 
 
-class AugmentedSSV2Benchmark(OnlineBenchmarkScore):
+class ModifiedAugmentedSSV2Benchmark(OnlineBenchmarkScore):
     def __init__(self, model_identifier, layer_name, debug: bool = False, batch_size: int = 4):
         super().__init__(
             stimulus_train_class=(
@@ -41,4 +41,5 @@ class AugmentedSSV2Benchmark(OnlineBenchmarkScore):
         )
 
 
-BENCHMARK_REGISTRY["AugmentedSSV2"] = AugmentedSSV2Benchmark
+BENCHMARK_REGISTRY["ModifiedAugmentedSSV2Benchmark"] = ModifiedAugmentedSSV2Benchmark
+
