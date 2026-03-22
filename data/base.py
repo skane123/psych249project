@@ -95,7 +95,7 @@ class BaseDataset(ABC):
                 f"SCIKIT_LEARN_DATA environment variable must be setup for fetching data (export SCIKIT_LEARN_DATA=path/to/download/data)"
             )
         return os.path.join(
-            get_data_home(), self.__class__.__name__, *suffix_paths
+            "/content/drive/MyDrive/Psych249", self.__class__.__name__, *suffix_paths
         )
 
     @abstractmethod
