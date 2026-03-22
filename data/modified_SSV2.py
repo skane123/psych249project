@@ -55,9 +55,9 @@ class SSV2Pruned(BaseDataset):
         self.labels: List[int] = []
         self.target_fps = 12.0
         self.video_folder_name = (
-            "modified_train_videos/randomized"
+            "modified_train_videos/gapped"
             if train
-            else "modified_test_videos/randomized"
+            else "modified_test_videos/gapped"
         )
 
         self.video_path = os.path.join(self.root_dir, self.video_folder_name)
