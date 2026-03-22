@@ -17,7 +17,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from .base import BaseMetric
 from .utils import pearson_correlation_scorer
 
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 
 
 class BehavioralRegressionMetric(BaseMetric):
