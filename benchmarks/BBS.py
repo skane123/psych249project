@@ -123,7 +123,7 @@ class BenchmarkScore:
         self.assembly_train_kwargs = assembly_train_kwargs or {}
         self.assembly_test_kwargs = assembly_test_kwargs or {}
 
-        data_home = get_data_home()
+        data_home = "/content/drive/MyDrive/Psych249"
         self.features_path = os.path.join(data_home, 'features')
         os.makedirs(self.features_path, exist_ok=True)
 
@@ -426,7 +426,7 @@ class AssemblyBenchmarkScorer:
         self.source_name = self.source_assembly_class.__name__
         self.target_name = self.target_assembly_class.__name__
 
-        data_home = get_data_home()
+        data_home = "/content/drive/MyDrive/Psych249"
         results_base = os.environ.get('RESULTS_PATH', data_home)
         results_dir = os.path.join(results_base, 'results')
         os.makedirs(results_dir, exist_ok=True)
