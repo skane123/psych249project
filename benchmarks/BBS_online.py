@@ -285,7 +285,7 @@ class OnlineBenchmarkScore:
         self.online_metrics_to_run: Dict[str, OnlineMetric] = {}
 
         # Data home, results path (similar to BenchmarkScore)
-        default_data_home = get_data_home()
+        default_data_home = "/content/drive/MyDrive/Psych249"
         # if RESULTS_PATH is set, use it, otherwise use default_data_home
         results_base = os.environ.get('RESULTS_PATH', default_data_home)
 
@@ -485,7 +485,7 @@ class OnlineAssemblyBenchmarkScorer:
         self.metric_params = {}
 
         # Setup Results Directory
-        data_home = get_data_home()
+        data_home = "/content/drive/MyDrive/Psych249"
         results_base = os.environ.get('RESULTS_PATH', data_home)
         self.results_dir = os.path.join(results_base, 'results')
         os.makedirs(self.results_dir, exist_ok=True)
