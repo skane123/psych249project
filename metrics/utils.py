@@ -7,7 +7,7 @@ from typing import Dict, Callable, List, Optional, Tuple
 from scipy.stats import pearsonr
 from sklearn.metrics import r2_score
 from sklearn.model_selection import KFold, StratifiedKFold
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 
 import math
 import numpy as np
