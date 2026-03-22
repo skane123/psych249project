@@ -144,8 +144,9 @@ class SSV2PrunedStimulusTrainSet(SSV2Pruned):
         overwrite: bool = False,
         preprocess: Optional[Callable] = None
     ):
-        if root_dir is None:
-            root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
+        # if root_dir is None:
+        #     root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
+        root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
         super().__init__(root_dir=root_dir, overwrite=overwrite,
                          preprocess=preprocess, train=True)
 
@@ -157,8 +158,9 @@ class AugmentedSSV2PrunedStimulusTrainSet(SSV2Pruned):
         overwrite: bool = False,
         preprocess: Optional[Callable] = None
     ):
-        if root_dir is None:
-            root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
+        # if root_dir is None:
+        #     root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
+        root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
         super().__init__(root_dir=root_dir, overwrite=overwrite, preprocess=preprocess, train=True,
                          apply_randaugment=True)
 
@@ -170,7 +172,8 @@ class SSV2PrunedStimulusTestSet(SSV2Pruned):
         overwrite: bool = False,
         preprocess: Optional[Callable] = None
     ):
-        if root_dir is None:
-            root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
+        # if root_dir is None:
+        #     root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
+        root_dir = os.path.join("/content/drive/MyDrive/Psych249", SSV2Pruned.__name__)
         super().__init__(root_dir=root_dir, overwrite=overwrite,
                          preprocess=preprocess, train=False)
